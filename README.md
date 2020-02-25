@@ -11,6 +11,9 @@ Based on [Tyler's article: PJSIP and RingCentral — Part 1: Get Started](https:
 git clone git@github.com:zxdong262/pjsip-rc-demo.git
 cd pjsip-rc-demo
 
+# create config file and fill all fields
+cp config.sample.hpp config.hpp
+
 # compile to exe file
 make
 
