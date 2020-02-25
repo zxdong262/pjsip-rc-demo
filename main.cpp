@@ -33,9 +33,9 @@ int main()
     // Configure an AccountConfig
     AccountConfig acfg;
     acfg.idUri = "sip:" + userName + "@sip.ringcentral.com";
-    acfg.regConfig.registrarUri = registrarUri;
-    const pj::StringVector outboundProxyStr = { "sip:" + outboundProxy };
-    acfg.sipConfig.proxies = outboundProxyStr;
+    acfg.regConfig.registrarUri = "sip:" + registrarUri;
+    // const pj::StringVector outboundProxyStr = { "sip:" + outboundProxy };
+    acfg.sipConfig.proxies = { "sip:" + outboundProxy };
     AuthCredInfo cred("digest", "*", authorizationId, 0, password);
     acfg.sipConfig.authCreds.push_back( cred );
 
